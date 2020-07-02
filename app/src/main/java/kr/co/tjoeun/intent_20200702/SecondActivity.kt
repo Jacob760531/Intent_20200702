@@ -17,6 +17,16 @@ class SecondActivity : AppCompatActivity() {
 
         receivedMessageTxt.text = receivedMessage
 
+        val recNum = intent.getIntExtra("number",-1)
+
+//        numberTxt.text = "고유번호 : " + recNum.toString()
+
+        numberTxt.text = "고유번호 : ${recNum}"
+
+
+
+
+
 
     }
 }
