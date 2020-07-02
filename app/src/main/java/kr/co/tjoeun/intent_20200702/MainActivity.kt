@@ -11,6 +11,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+//        두번째 엑티비티로 데이터 전달
+        sendToSecondBtn.setOnClickListener {
+
+
+        }
+
+
         moveToFirstBtn.setOnClickListener {
 
 //            Intent() = JAVA : new Intent() => 객체화
