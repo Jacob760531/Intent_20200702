@@ -16,9 +16,13 @@ class MainActivity : AppCompatActivity() {
 
             val inputMessage = messageEdt.text.toString()
 
+            val inputNum = numberEdt.text.toString().toInt()
+
             val myIntent = Intent(this,SecondActivity::class.java)
 
             myIntent.putExtra("message",inputMessage)
+
+            myIntent.putExtra("number",inputNum)
 
             startActivity(myIntent)
         }
