@@ -8,6 +8,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+//    닉네임 변경 요청 고유값을 멤버변수로 생성.
+    val REQ_FOR_NICKNAME = 1000
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             val myIntent = Intent(this,EditNickNameActivity::class.java)
 
 //            결과를 가져오자
-            startActivityForResult(myIntent,1000)
+            startActivityForResult(myIntent,REQ_FOR_NICKNAME)
 
         }
 
@@ -57,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
 //        어떤 결과를 가지러 다녀온건지 확인.
 
-        if (requestCode == 1000) {
+        if (requestCode == REQ_FOR_NICKNAME) {
 //            완료로 돌아온게 맞는지 확인
             if (resultCode == Activity.RESULT_OK){
 
