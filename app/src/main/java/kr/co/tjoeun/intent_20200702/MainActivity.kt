@@ -14,7 +14,13 @@ class MainActivity : AppCompatActivity() {
 //        두번째 엑티비티로 데이터 전달
         sendToSecondBtn.setOnClickListener {
 
+            val inputMessage = messageEdt.text.toString()
 
+            val myIntent = Intent(this,SecondActivity::class.java)
+
+            myIntent.putExtra("message",inputMessage)
+
+            startActivity(myIntent)
         }
 
 
